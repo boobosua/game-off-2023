@@ -1,18 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using System;
+using UnityEngine.Events;
 
-public class State : MonoBehaviour
+namespace Scaleton
 {
-    // Start is called before the first frame update
-    void Start()
+    public abstract class State
     {
-        
-    }
+        public event UnityAction<State, String> OnTransitioned;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public abstract void Enter();
+        public abstract void Tick(float deltaTime);
+        public abstract void FixedTick(float fixedDeltaTime);
+        public abstract void Exit();
+
+        protected void Transit(State from, String key)
+        {
+            OnTransitioned?.Invoke(from, key);
+        }
     }
 }

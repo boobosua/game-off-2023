@@ -57,5 +57,5 @@
     "Temp/": true
   },
   "dotnet.defaultSolution": "Scaleton.sln",
-  "cSpell.words": ["Gamepad", "Gameplay", "Scaleton", "Scriptable"]
+  "cSpell.words": ["Gamepad", "Gameplay", "Rigidbody", "Scaleton", "Scriptable"]
 }
