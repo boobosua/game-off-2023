@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Scaleton
@@ -12,22 +10,36 @@ namespace Scaleton
 
         public override void Enter()
         {
-            throw new System.NotImplementedException();
-        }
-
-        public override void Exit()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public override void FixedTick(float fixedDeltaTime)
-        {
-            throw new System.NotImplementedException();
+            _jumpModule.Jump();
+            _jumpModule.SetUpGravity();
+            _input.OnJumpReleased += CancelJump;
         }
 
         public override void Tick(float deltaTime)
         {
-            throw new System.NotImplementedException();
+            if (_rb.velocity.y <= 0)
+            {
+                Transit(this, _sm.Falling);
+
+                return;
+            }
+        }
+
+        public override void FixedTick(float fixedDeltaTime)
+        {
+            _moveModule.Move(_input.MoveX, false);
+        }
+
+        public override void Exit()
+        {
+            _input.OnJumpReleased -= CancelJump;
+            _jumpModule.SetDefaultGravity();
+        }
+
+        private void CancelJump()
+        {
+            _rb.velocity = Vector2.zero;
+            Transit(this, _sm.Falling);
         }
     }
 }

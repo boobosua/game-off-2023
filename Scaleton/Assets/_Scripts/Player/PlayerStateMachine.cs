@@ -10,6 +10,7 @@ namespace Scaleton
 
         [field: Header("Modules"), Space(2)]
         [field: SerializeField, Space(1)] public MoveModule MoveModule { get; private set; }
+        [field: SerializeField, Space(1)] public JumpModule JumpModule { get; private set; }
 
         [field: Header("Components"), Space(2)]
         [field: SerializeField, Space(1)] public Rigidbody2D Rb { get; private set; }
@@ -65,7 +66,7 @@ namespace Scaleton
 
             // state = state.Remove(0, 32);
 
-            GUI.Label(new Rect(20, 20, 200, 40), state);
+            GUI.Label(new Rect(40, 40, 200, 40), state);
         }
     }
 }

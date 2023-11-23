@@ -318,7 +318,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7672098523922957662, guid: d90e6c85d55b1451393687663cfe40a9, type: 3}
       propertyPath: _checkSize.y
-      value: 0.03
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 7672098523922957662, guid: d90e6c85d55b1451393687663cfe40a9, type: 3}
       propertyPath: _checkLayer.m_Bits
@@ -445,7 +445,7 @@ GameObject:
   - component: {fileID: 916945509}
   - component: {fileID: 916945508}
   - component: {fileID: 916945507}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightWeight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1170,6 +1170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Input>k__BackingField: {fileID: 11400000, guid: 24090c0aacf7948de8079b00bf616d47, type: 2}
   <MoveModule>k__BackingField: {fileID: 1555805303}
+  <JumpModule>k__BackingField: {fileID: 1895816431}
   <Rb>k__BackingField: {fileID: 1225247220}
 --- !u!50 &1225247220
 Rigidbody2D:
@@ -1432,9 +1433,17 @@ PrefabInstance:
       value: Jump
       objectReference: {fileID: 0}
     - target: {fileID: 7216936131660096468, guid: 4c6e082f2512c4cc3ae0475021734197, type: 3}
+      propertyPath: _rb
+      value: 
+      objectReference: {fileID: 1225247220}
+    - target: {fileID: 7216936131660096468, guid: 4c6e082f2512c4cc3ae0475021734197, type: 3}
       propertyPath: _data
       value: 
       objectReference: {fileID: 11400000, guid: 94c39c9528f24487abcf1139b0370511, type: 2}
+    - target: {fileID: 7216936131660096468, guid: 4c6e082f2512c4cc3ae0475021734197, type: 3}
+      propertyPath: _detector
+      value: 
+      objectReference: {fileID: 616591371}
     - target: {fileID: 9139803405574972204, guid: 4c6e082f2512c4cc3ae0475021734197, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1485,6 +1494,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9139803405574972204, guid: 4c6e082f2512c4cc3ae0475021734197, type: 3}
   m_PrefabInstance: {fileID: 1895816429}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1895816431 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7216936131660096468, guid: 4c6e082f2512c4cc3ae0475021734197, type: 3}
+  m_PrefabInstance: {fileID: 1895816429}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23938c8a9f0764b4080989c09b1c89f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2040469452
 GameObject:
   m_ObjectHideFlags: 0

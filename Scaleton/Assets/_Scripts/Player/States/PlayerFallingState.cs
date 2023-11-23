@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 namespace Scaleton
 {
     public class PlayerFallingState : PlayerBaseState
@@ -12,22 +8,27 @@ namespace Scaleton
 
         public override void Enter()
         {
-            throw new System.NotImplementedException();
-        }
-
-        public override void Exit()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public override void FixedTick(float fixedDeltaTime)
-        {
-            throw new System.NotImplementedException();
+            _jumpModule.SetDownGravity();
         }
 
         public override void Tick(float deltaTime)
         {
-            throw new System.NotImplementedException();
+            if (_jumpModule.LastOnGroundTime > 0)
+            {
+                Transit(this, _sm.Idle);
+
+                return;
+            }
+        }
+
+        public override void FixedTick(float fixedDeltaTime)
+        {
+            _moveModule.Move(_input.MoveX, false);
+        }
+
+        public override void Exit()
+        {
+            _jumpModule.SetDefaultGravity();
         }
     }
 }

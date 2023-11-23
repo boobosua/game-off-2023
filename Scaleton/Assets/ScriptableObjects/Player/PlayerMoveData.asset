@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40743290d0aa4456b9d13eb5951ef3b9, type: 3}
   m_Name: PlayerMoveData
   m_EditorClassIdentifier: 
-  <MaxSpeed>k__BackingField: 4
-  <GroundAcceleration>k__BackingField: 35
-  <AirAcceleration>k__BackingField: 20
+  <MaxSpeed>k__BackingField: 6
+  <GroundAcceleration>k__BackingField: 40
+  <AirAcceleration>k__BackingField: 45
