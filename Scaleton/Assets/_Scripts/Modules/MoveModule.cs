@@ -28,12 +28,11 @@ namespace Scaleton
             CheckDirectionToFace(direction > 0);
         }
 
-        public void Stop()
-        {
-            Move(0f);
-        }
+        public void Stop() => Move(0f);
 
-        public void CheckDirectionToFace(bool isMovingRight)
+        public float GetFacingDirectionX() => _isFacingRight ? 1 : -1;
+
+        private void CheckDirectionToFace(bool isMovingRight)
         {
             if (isMovingRight == _isFacingRight) return;
 

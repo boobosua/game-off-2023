@@ -30,7 +30,7 @@ namespace Scaleton
             }
         }
 
-        public void SetBuffer()
+        public void ResetBufferTime()
         {
             LastJumpPressedTime = _data.JumpBufferTime;
         }

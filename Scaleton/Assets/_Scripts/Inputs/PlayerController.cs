@@ -13,8 +13,10 @@ namespace Scaleton
         public float MoveX { get; private set; }
         public event UnityAction OnJumpPressed;
         public event UnityAction OnJumpReleased;
-        public event UnityAction OnAction01Pressed;
-        public event UnityAction OnAction02Pressed;
+        public event UnityAction OnDashPressed;
+        public event UnityAction OnPickUpPressed;
+        public event UnityAction OnThrowPressed;
+        public event UnityAction OnThrowReleased;
 
         private void OnEnable()
         {
@@ -49,14 +51,28 @@ namespace Scaleton
             }
         }
 
-        public void OnAction01(InputAction.CallbackContext context)
+        public void OnDash(InputAction.CallbackContext context)
         {
-            OnAction01Pressed?.Invoke();
+            OnDashPressed?.Invoke();
         }
 
-        public void OnAction02(InputAction.CallbackContext context)
+        public void OnPickUp(InputAction.CallbackContext context)
         {
-            OnAction02Pressed?.Invoke();
+            OnPickUpPressed?.Invoke();
+        }
+
+        public void OnAimToThrow(InputAction.CallbackContext context)
+        {
+            switch (context.phase)
+            {
+                case InputActionPhase.Started:
+                    OnThrowPressed?.Invoke();
+                    break;
+
+                case InputActionPhase.Canceled:
+                    OnThrowReleased?.Invoke();
+                    break;
+            }
         }
     }
 }

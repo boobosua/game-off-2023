@@ -9,6 +9,7 @@ namespace Scaleton
         protected Rigidbody2D _rb;
         protected MoveModule _moveModule;
         protected JumpModule _jumpModule;
+        protected DashModule _dashModule;
 
         public PlayerBaseState(PlayerStateMachine stateMachine)
         {
@@ -18,11 +19,19 @@ namespace Scaleton
             _rb = _sm.Rb;
             _moveModule = _sm.MoveModule;
             _jumpModule = _sm.JumpModule;
+            _dashModule = _sm.DashModule;
         }
 
         protected void PlayerController_OnJumpPressed()
         {
-            _jumpModule.SetBuffer();
+            _jumpModule.ResetBufferTime();
+        }
+
+        protected void PlayerController_OnDashPressed()
+        {
+            if (!_dashModule.CanDash) return;
+
+            _dashModule.ResetBufferTime();
         }
     }
 }

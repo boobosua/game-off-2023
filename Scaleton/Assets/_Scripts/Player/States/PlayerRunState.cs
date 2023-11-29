@@ -9,6 +9,7 @@ namespace Scaleton
         public override void Enter()
         {
             _input.OnJumpPressed += PlayerController_OnJumpPressed;
+            _input.OnDashPressed += PlayerController_OnDashPressed;
         }
 
         public override void Tick(float deltaTime)
@@ -33,6 +34,13 @@ namespace Scaleton
 
                 return;
             }
+
+            if (_dashModule.LastDashPressedTime > 0)
+            {
+                Transit(this, _sm.Dashing);
+
+                return;
+            }
         }
 
         public override void FixedTick(float fixedDeltaTime)
@@ -43,6 +51,7 @@ namespace Scaleton
         public override void Exit()
         {
             _input.OnJumpPressed -= PlayerController_OnJumpPressed;
+            _input.OnDashPressed -= PlayerController_OnDashPressed;
         }
     }
 }

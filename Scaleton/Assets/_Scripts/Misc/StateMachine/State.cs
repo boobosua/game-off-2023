@@ -12,9 +12,9 @@ namespace Scaleton
         public abstract void FixedTick(float fixedDeltaTime);
         public abstract void Exit();
 
-        protected void Transit(State from, String key)
+        protected void Transit(State from, String to)
         {
-            OnTransitioned?.Invoke(from, key);
+            OnTransitioned?.Invoke(from, to);
         }
     }
 }

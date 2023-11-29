@@ -10,6 +10,8 @@ namespace Scaleton
 
         public override void Enter()
         {
+            _input.OnDashPressed += PlayerController_OnDashPressed;
+
             _jumpModule.Jump();
             _jumpModule.SetUpGravity();
             _input.OnJumpReleased += CancelJump;
@@ -20,6 +22,13 @@ namespace Scaleton
             if (_rb.velocity.y <= 0)
             {
                 Transit(this, _sm.Falling);
+
+                return;
+            }
+
+            if (_dashModule.LastDashPressedTime > 0)
+            {
+                Transit(this, _sm.Dashing);
 
                 return;
             }
@@ -34,6 +43,8 @@ namespace Scaleton
         {
             _input.OnJumpReleased -= CancelJump;
             _jumpModule.SetDefaultGravity();
+
+            _input.OnDashPressed -= PlayerController_OnDashPressed;
         }
 
         private void CancelJump()

@@ -8,6 +8,8 @@ namespace Scaleton
 
         public override void Enter()
         {
+            _input.OnDashPressed += PlayerController_OnDashPressed;
+
             _jumpModule.SetDownGravity();
         }
 
@@ -16,6 +18,13 @@ namespace Scaleton
             if (_jumpModule.LastOnGroundTime > 0)
             {
                 Transit(this, _sm.Idle);
+
+                return;
+            }
+
+            if (_dashModule.LastDashPressedTime > 0)
+            {
+                Transit(this, _sm.Dashing);
 
                 return;
             }
@@ -29,6 +38,8 @@ namespace Scaleton
         public override void Exit()
         {
             _jumpModule.SetDefaultGravity();
+
+            _input.OnDashPressed -= PlayerController_OnDashPressed;
         }
     }
 }
