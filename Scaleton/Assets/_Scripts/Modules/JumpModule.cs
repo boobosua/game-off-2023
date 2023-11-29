@@ -54,7 +54,7 @@ namespace Scaleton
         {
             _velocity = _rb.velocity;
 
-            var jumpVelocity = Mathf.Sqrt(-2f * Physics2D.gravity.y * _data.JumpHeight * _data.UpwardMultiplier);
+            var jumpVelocity = _rb.mass * Mathf.Sqrt(-2f * Physics2D.gravity.y * _data.JumpHeight * _data.UpwardMultiplier);
 
             LastOnGroundTime = 0f;
             LastJumpPressedTime = 0f;
