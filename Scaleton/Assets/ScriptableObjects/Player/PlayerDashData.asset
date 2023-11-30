@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396ecc52a792c4896888d4c849bc7319, type: 3}
   m_Name: PlayerDashData
   m_EditorClassIdentifier: 
-  <Speed>k__BackingField: 13
+  <Speed>k__BackingField: 11
   <EndTime>k__BackingField: 0.25
   <BufferTime>k__BackingField: 0.1
   <Cooldown>k__BackingField: 2

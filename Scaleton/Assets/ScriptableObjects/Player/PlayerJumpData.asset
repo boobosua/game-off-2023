@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb95fcbedabab45f192fcc8ca83adfcf, type: 3}
   m_Name: PlayerJumpData
   m_EditorClassIdentifier: 
-  <JumpHeight>k__BackingField: 3
-  <DownwardMultiplier>k__BackingField: 7
+  <JumpHeight>k__BackingField: 5
+  <DownwardMultiplier>k__BackingField: 8
   <UpwardMultiplier>k__BackingField: 5
   <CoyoteTime>k__BackingField: 0.1
   <JumpBufferTime>k__BackingField: 0.1
