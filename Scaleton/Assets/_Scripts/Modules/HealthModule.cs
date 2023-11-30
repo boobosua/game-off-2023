@@ -19,6 +19,8 @@ namespace Scaleton
 
         private void HurtBox_OnInstantDeath()
         {
+            Debug.Log($"Destroyed {_owner.name}.");
+
             Destroy(_owner);
         }
     }

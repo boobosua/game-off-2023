@@ -2276,7 +2276,7 @@ MonoBehaviour:
   _hingeJoint: {fileID: 7035355326510600314}
   _distanceJoint: {fileID: 218523989211159604}
   _progressBar: {fileID: 2350128571254468221}
-  _maxReactionForce: 35000
+  _maxReactionForce: 10000
 --- !u!1 &3820572970192086571
 GameObject:
   m_ObjectHideFlags: 0

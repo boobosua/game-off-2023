@@ -22,7 +22,9 @@ namespace Scaleton
             // Update the reaction force value.
             _currentReactionForce = Mathf.Abs(_hingeJoint.reactionForce.y);
 
-            // TODO: Update progress UI.
+            // Update progress UI.
+            var percent = _currentReactionForce / _maxReactionForce;
+            _progressBar.UpdateReactionForceBar(percent);
 
             // Destroy the platform connected link.
             if (_currentReactionForce >= _maxReactionForce)

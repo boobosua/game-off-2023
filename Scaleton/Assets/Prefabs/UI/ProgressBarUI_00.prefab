@@ -122,6 +122,7 @@ MonoBehaviour:
   _yellowFill: {fileID: -1670893102, guid: af14c3d6d66318144b6dccdfd962dd42, type: 3}
   _redFill: {fileID: 34984601, guid: af14c3d6d66318144b6dccdfd962dd42, type: 3}
   _warningThreshold: 0.5
+  _dangerThreshold: 0.8
 --- !u!1 &2151550583037691042
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,8 +157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 5.12, y: 1.28}
+  m_AnchoredPosition: {x: 0.32116, y: 0}
+  m_SizeDelta: {x: 3.04335, y: 1.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9209169523242273708
 CanvasRenderer:
@@ -231,8 +232,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 5.12, y: 1.28}
+  m_AnchoredPosition: {x: 0.32116, y: 0}
+  m_SizeDelta: {x: 3.04335, y: 1.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8037497360329263952
 CanvasRenderer:
@@ -267,7 +268,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0

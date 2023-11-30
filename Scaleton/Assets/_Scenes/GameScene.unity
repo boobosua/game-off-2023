@@ -2795,7 +2795,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2400152485718812858, guid: 7fd02dc4e4aa44eb8ba3808b80c2cf85, type: 3}
       propertyPath: m_Mass
-      value: 10
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4480509377526527735, guid: 7fd02dc4e4aa44eb8ba3808b80c2cf85, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2985,6 +2985,10 @@ PrefabInstance:
     - target: {fileID: 3733963696942390542, guid: 87ac4c4173fc324429fa4e6b5138a73a, type: 3}
       propertyPath: m_Name
       value: Weight_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4310190372718316018, guid: 87ac4c4173fc324429fa4e6b5138a73a, type: 3}
+      propertyPath: m_FillAmount
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5508345837543519372, guid: 87ac4c4173fc324429fa4e6b5138a73a, type: 3}
       propertyPath: m_LocalPosition.x
