@@ -65,14 +65,14 @@ namespace Scaleton
             _stateDict.Clear();
         }
 
-        private void OnGUI()
-        {
-            var state = _currentState.ToString();
+        // private void OnGUI()
+        // {
+        //     var state = _currentState.ToString();
 
-            // state = state.Remove(0, 32);
+        //     // state = state.Remove(0, 32);
 
-            GUI.Label(new Rect(40, 40, 200, 40), state);
-        }
+        //     GUI.Label(new Rect(40, 40, 200, 40), state);
+        // }
     }
 }
 
