@@ -17,6 +17,7 @@ namespace Scaleton
         public event UnityAction OnPickUpPressed;
         public event UnityAction OnThrowPressed;
         public event UnityAction OnThrowReleased;
+        public event UnityAction OnPausePressed;
 
         private void OnEnable()
         {
@@ -73,6 +74,11 @@ namespace Scaleton
                     OnThrowReleased?.Invoke();
                     break;
             }
+        }
+
+        public void OnPause(InputAction.CallbackContext context)
+        {
+            OnPausePressed?.Invoke();
         }
     }
 }
