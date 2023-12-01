@@ -5,7 +5,7 @@ namespace Scaleton
 {
     public class EnemySpawner : MonoBehaviour
     {
-        [SerializeField, Range(1f, 10f)] private float _spawnRangeX = 2f;
+        [SerializeField, Range(0.1f, 10f)] private float _spawnRangeX = 2f;
         [SerializeField, Range(1f, 30f)] private float _spawnTimer = 5f;
         [SerializeField] private List<GameObject> _enemyTypes;
 

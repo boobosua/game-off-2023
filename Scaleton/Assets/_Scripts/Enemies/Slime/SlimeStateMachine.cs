@@ -9,10 +9,15 @@ namespace Scaleton
         [field: SerializeField, Space(1)] public MoveModule MoveModule { get; private set; }
         [field: SerializeField, Space(1)] public JumpModule JumpModule { get; private set; }
         [field: SerializeField, Space(1)] public GroundDetectorModule EdgeDetector { get; private set; }
+        [field: SerializeField, Space(1)] public HurtBoxModule HurtBox;
 
         [field: Header("Components"), Space(2)]
         [field: SerializeField, Space(1)] public Rigidbody2D Rb { get; private set; }
         [field: SerializeField, Space(1)] public Animator Animator { get; private set; }
+
+        [field: Header(header: "Materials"), Space(2)]
+        [field: SerializeField, Space(1)] public PhysicsMaterial2D Frictionless { get; private set; }
+        [field: SerializeField, Space(1)] public PhysicsMaterial2D Bouncy { get; private set; }
 
         public readonly String Appear = "SlimeAppear";
         public readonly String Idle = "SlimeIdle";
@@ -48,6 +53,27 @@ namespace Scaleton
         private void Start()
         {
             SetInitialState(_appearState);
+        }
+
+        private void OnEnable()
+        {
+            HurtBox.OnHit += HurtBoxModule_OnHit;
+        }
+
+        private void OnDisable()
+        {
+            HurtBox.OnHit -= HurtBoxModule_OnHit;
+        }
+
+        private void HurtBoxModule_OnHit(Vector3 sourceDir)
+        {
+            // Apply force.
+            var distance = sourceDir - transform.position;
+            var reflectedDir = Vector2.Reflect(distance, distance.normalized).normalized;
+
+            Rb.AddForce(reflectedDir * 15f * Rb.mass, ForceMode2D.Impulse);
+
+            OnStateTransitioned(_currentState, KnockOut);
         }
     }
 }

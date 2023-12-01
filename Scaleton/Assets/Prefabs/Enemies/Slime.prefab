@@ -114,8 +114,11 @@ MonoBehaviour:
   <MoveModule>k__BackingField: {fileID: 4945324016687454919}
   <JumpModule>k__BackingField: {fileID: 6913839737317179937}
   <EdgeDetector>k__BackingField: {fileID: 3664301397461320563}
+  HurtBox: {fileID: 6398147648452246189}
   <Rb>k__BackingField: {fileID: 7697494672128174497}
   <Animator>k__BackingField: {fileID: 3383654637404039147}
+  <Frictionless>k__BackingField: {fileID: 6200000, guid: 76098453df1844f11aa995d8de525869, type: 2}
+  <Bouncy>k__BackingField: {fileID: 6200000, guid: 167e3dbaf700848679e5f441a4af46fe, type: 2}
 --- !u!1 &2302372151345414244
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +318,7 @@ Transform:
   m_GameObject: {fileID: 8006141173979793853}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalPosition: {x: 0.6, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -419,9 +422,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.06}
   serializedVersion: 2
-  m_Radius: 0.65
+  m_Radius: 0.5
 --- !u!114 &6398147648452246189
 MonoBehaviour:
   m_ObjectHideFlags: 0

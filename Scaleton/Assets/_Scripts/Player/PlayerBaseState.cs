@@ -7,9 +7,12 @@ namespace Scaleton
         protected PlayerStateMachine _sm;
         protected PlayerController _input;
         protected Rigidbody2D _rb;
+
         protected MoveModule _moveModule;
         protected JumpModule _jumpModule;
         protected DashModule _dashModule;
+
+        protected HitBoxModule _landHitBox;
 
         public PlayerBaseState(PlayerStateMachine stateMachine)
         {
@@ -17,9 +20,11 @@ namespace Scaleton
 
             _input = _sm.Input;
             _rb = _sm.Rb;
+
             _moveModule = _sm.MoveModule;
             _jumpModule = _sm.JumpModule;
             _dashModule = _sm.DashModule;
+            _landHitBox = _sm.LandHitBox;
         }
 
         protected void PlayerController_OnJumpPressed()

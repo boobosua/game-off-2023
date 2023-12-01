@@ -1,12 +1,16 @@
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace Scaleton
 {
     public class Lava : MonoBehaviour
     {
-        private void OnCollisionEnter2D(Collision2D other)
+        [SerializeField] private GameObject _explosionVFX;
+
+        private void OnTriggerEnter2D(Collider2D other)
         {
             // Splash sound, effect, etc...
+            Instantiate(_explosionVFX, other.gameObject.transform.position, quaternion.identity);
         }
     }
 }

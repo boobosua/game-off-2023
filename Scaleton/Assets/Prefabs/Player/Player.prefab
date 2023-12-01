@@ -124,6 +124,7 @@ Transform:
   - {fileID: 7473326549574088654}
   - {fileID: 5543300669214859299}
   - {fileID: 7902849534694749491}
+  - {fileID: 5432320201618321776}
   - {fileID: 6815558533162528761}
   m_Father: {fileID: 4480509377526527735}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -369,6 +370,8 @@ MonoBehaviour:
   <MoveModule>k__BackingField: {fileID: 1607792202692405303}
   <JumpModule>k__BackingField: {fileID: 5554911244112073701}
   <DashModule>k__BackingField: {fileID: 4191931120227043500}
+  <DashHitBox>k__BackingField: {fileID: 8802420152471212596}
+  <LandHitBox>k__BackingField: {fileID: 6018186187672221926, guid: e6a6e52d31f704ae59e85a126a5f5fd4, type: 3}
   <Rb>k__BackingField: {fileID: 2400152485718812858}
 --- !u!1 &6084883952156898563
 GameObject:
@@ -598,6 +601,130 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9139803405574972204, guid: 4c6e082f2512c4cc3ae0475021734197, type: 3}
   m_PrefabInstance: {fileID: 2968073866877317169}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3002948836589316818
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 9135976558077361642}
+    m_Modifications:
+    - target: {fileID: 7120160771756481442, guid: d9057d097e0fb4222b10dbee1ebd4a69, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120160771756481442, guid: d9057d097e0fb4222b10dbee1ebd4a69, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120160771756481442, guid: d9057d097e0fb4222b10dbee1ebd4a69, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120160771756481442, guid: d9057d097e0fb4222b10dbee1ebd4a69, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120160771756481442, guid: d9057d097e0fb4222b10dbee1ebd4a69, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120160771756481442, guid: d9057d097e0fb4222b10dbee1ebd4a69, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120160771756481442, guid: d9057d097e0fb4222b10dbee1ebd4a69, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120160771756481442, guid: d9057d097e0fb4222b10dbee1ebd4a69, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120160771756481442, guid: d9057d097e0fb4222b10dbee1ebd4a69, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120160771756481442, guid: d9057d097e0fb4222b10dbee1ebd4a69, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7321676987518996701, guid: d9057d097e0fb4222b10dbee1ebd4a69, type: 3}
+      propertyPath: m_Name
+      value: DashHitBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 7321676987518996701, guid: d9057d097e0fb4222b10dbee1ebd4a69, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7321676987518996701, guid: d9057d097e0fb4222b10dbee1ebd4a69, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7321676987518996701, guid: d9057d097e0fb4222b10dbee1ebd4a69, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 1381287825330961135}
+  m_SourcePrefab: {fileID: 100100000, guid: d9057d097e0fb4222b10dbee1ebd4a69, type: 3}
+--- !u!4 &5432320201618321776 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7120160771756481442, guid: d9057d097e0fb4222b10dbee1ebd4a69, type: 3}
+  m_PrefabInstance: {fileID: 3002948836589316818}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5491942262355851791 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7321676987518996701, guid: d9057d097e0fb4222b10dbee1ebd4a69, type: 3}
+  m_PrefabInstance: {fileID: 3002948836589316818}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &1381287825330961135
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5491942262355851791}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.7
+--- !u!114 &8802420152471212596 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6018186187672221926, guid: d9057d097e0fb4222b10dbee1ebd4a69, type: 3}
+  m_PrefabInstance: {fileID: 3002948836589316818}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5491942262355851791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dccd4c40b0927425cb976c7ba7d2d55a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4826027360121043245
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -656,7 +783,7 @@ PrefabInstance:
       objectReference: {fileID: 2806111089162400879}
     - target: {fileID: 4968939075663266229, guid: ddda7a92b6cdd4b4f8cc79c047828559, type: 3}
       propertyPath: m_Name
-      value: HealthModule
+      value: Health
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

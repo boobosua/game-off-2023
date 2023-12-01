@@ -17,6 +17,8 @@ namespace Scaleton
         {
             if (_jumpModule.LastOnGroundTime > 0)
             {
+                _sm.SpawnLandingHitBox();
+
                 Transit(this, _sm.Idle);
 
                 return;

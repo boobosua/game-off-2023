@@ -1,4 +1,5 @@
 using System;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace Scaleton
@@ -12,6 +13,7 @@ namespace Scaleton
         [field: SerializeField, Space(1)] public MoveModule MoveModule { get; private set; }
         [field: SerializeField, Space(1)] public JumpModule JumpModule { get; private set; }
         [field: SerializeField, Space(1)] public DashModule DashModule { get; private set; }
+        [field: SerializeField, Space(1)] public HitBoxModule LandHitBox { get; private set; }
 
         [field: Header("Components"), Space(2)]
         [field: SerializeField, Space(1)] public Rigidbody2D Rb { get; private set; }
@@ -50,6 +52,11 @@ namespace Scaleton
         private void Start()
         {
             SetInitialState(_idleState);
+        }
+
+        public void SpawnLandingHitBox()
+        {
+            Instantiate(LandHitBox, transform.position, quaternion.identity);
         }
     }
 }

@@ -2668,6 +2668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1deb33759dfef37419a63e1117d625e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _explosionVFX: {fileID: 2131210986630934211, guid: 9fcd9f6ea730045d193bbd8d6e385e27, type: 3}
 --- !u!1 &1097413552
 GameObject:
   m_ObjectHideFlags: 0
