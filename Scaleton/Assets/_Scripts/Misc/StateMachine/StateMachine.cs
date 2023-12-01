@@ -54,7 +54,6 @@ namespace Scaleton
         {
             foreach (var state in _stateDict.Values)
             {
-                Debug.Log($"Value: {state}.");
                 state.OnTransitioned += OnStateTransitioned;
             }
         }

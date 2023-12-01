@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 2837097444895551370}
   - component: {fileID: 6915449585956956592}
   - component: {fileID: 2107107585982732733}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: HurtBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3241,7 +3241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3449715412724793676}
   - component: {fileID: 8586616332740587677}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3914,7 +3914,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3085032572836016129}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Modules
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4109,6 +4109,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ProgressBarUI_00
       objectReference: {fileID: 0}
+    - target: {fileID: 1705205477454555101, guid: 265de1c4886c2407db1e54b36e9d607f, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151550583037691042, guid: 265de1c4886c2407db1e54b36e9d607f, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3701294693931141010, guid: 265de1c4886c2407db1e54b36e9d607f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4187,6 +4195,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3701294693931141010, guid: 265de1c4886c2407db1e54b36e9d607f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4716051734884733817, guid: 265de1c4886c2407db1e54b36e9d607f, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8746426678833584415, guid: 265de1c4886c2407db1e54b36e9d607f, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

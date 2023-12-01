@@ -12,8 +12,14 @@ namespace Scaleton
 
         private void FixedUpdate()
         {
-            IsGrounded = Physics2D.OverlapBox(_checkPoint.position, _checkSize, 0, _checkLayer);
+            IsGrounded = GetOverlapBox();
         }
+
+        private Collider2D GetOverlapBox()
+        {
+            return Physics2D.OverlapBox(_checkPoint.position, _checkSize, 0, _checkLayer);
+        }
+
 
         private void OnDrawGizmos()
         {
