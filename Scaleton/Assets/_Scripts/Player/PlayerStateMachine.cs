@@ -44,35 +44,13 @@ namespace Scaleton
             _stateDict.Add(Falling, _fallingState);
             _stateDict.Add(Dashing, _dashingState);
 
-            foreach (var state in _stateDict.Values)
-            {
-                state.OnTransitioned += OnStateTransitioned;
-            }
+            ConnectTransitions();
         }
 
         private void Start()
         {
             SetInitialState(_idleState);
         }
-
-        private void OnDestroy()
-        {
-            foreach (var state in _stateDict.Values)
-            {
-                state.OnTransitioned -= OnStateTransitioned;
-            }
-
-            _stateDict.Clear();
-        }
-
-        // private void OnGUI()
-        // {
-        //     var state = _currentState.ToString();
-
-        //     // state = state.Remove(0, 32);
-
-        //     GUI.Label(new Rect(40, 40, 200, 40), state);
-        // }
     }
 }
 

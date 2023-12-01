@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb95fcbedabab45f192fcc8ca83adfcf, type: 3}
+  m_Name: SlimeJumpData
+  m_EditorClassIdentifier: 
+  <JumpHeight>k__BackingField: 3.5
+  <DownwardMultiplier>k__BackingField: 8.5
+  <UpwardMultiplier>k__BackingField: 5.5
+  <CoyoteTime>k__BackingField: 0.1
+  <JumpBufferTime>k__BackingField: 0.1

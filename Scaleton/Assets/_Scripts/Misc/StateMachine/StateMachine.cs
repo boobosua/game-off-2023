@@ -24,6 +24,16 @@ namespace Scaleton
             _currentState?.FixedTick(Time.fixedDeltaTime);
         }
 
+        protected virtual void OnDestroy()
+        {
+            foreach (var state in _stateDict.Values)
+            {
+                state.OnTransitioned -= OnStateTransitioned;
+            }
+
+            _stateDict.Clear();
+        }
+
         protected void OnStateTransitioned(State from, String key)
         {
             if (_currentState != from) return;
@@ -38,6 +48,15 @@ namespace Scaleton
 
             // Enter new state;
             _currentState?.Enter();
+        }
+
+        protected void ConnectTransitions()
+        {
+            foreach (var state in _stateDict.Values)
+            {
+                Debug.Log($"Value: {state}.");
+                state.OnTransitioned += OnStateTransitioned;
+            }
         }
 
         protected void SetInitialState(State state)
