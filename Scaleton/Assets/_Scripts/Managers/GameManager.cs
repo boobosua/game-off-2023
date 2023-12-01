@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Scaleton
 {
@@ -10,6 +11,11 @@ namespace Scaleton
         {
             QualitySettings.vSyncCount = 0;
             Application.targetFrameRate = _maxFPS;
+        }
+
+        private void OnEnable()
+        {
+            PlayerStateMachine.OnPlayerDied += () => { SceneManager.LoadScene("MainMenuScene"); };
         }
     }
 }

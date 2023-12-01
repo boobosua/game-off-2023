@@ -1,6 +1,7 @@
 using System;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Scaleton
 {
@@ -17,6 +18,8 @@ namespace Scaleton
 
         [field: Header("Components"), Space(2)]
         [field: SerializeField, Space(1)] public Rigidbody2D Rb { get; private set; }
+
+        public static event UnityAction OnPlayerDied;
 
         public readonly String Idle = "PlayerIdle";
         public readonly String Run = "PlayerRun";
@@ -52,6 +55,14 @@ namespace Scaleton
         private void Start()
         {
             SetInitialState(_idleState);
+        }
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+
+            // Invoke end game.
+            OnPlayerDied?.Invoke();
         }
 
         public void SpawnLandingHitBox()
